@@ -1,0 +1,106 @@
+{
+    "class_names": [
+        "Tomato_Bacterial_Spot",
+        "Tomato_Early_Blight",
+        "Tomato_Healthy",
+        "Tomato_Late_Blight",
+        "Tomato_Septoria_Leaf_Spot",
+        "Tomato_Yellow_Leaf_Curl"
+    ],
+    "class_to_idx": {
+        "Tomato_Bacterial_Spot": 0,
+        "Tomato_Early_Blight": 1,
+        "Tomato_Healthy": 2,
+        "Tomato_Late_Blight": 3,
+        "Tomato_Septoria_Leaf_Spot": 4,
+        "Tomato_Yellow_Leaf_Curl": 5
+    },
+    "metrics": {
+        "binary_accuracy": 0.8809523809523809,
+        "binary_disease_recall": 0.8904109589041096,
+        "binary_precision": 0.9701492537313433,
+        "binary_f1_score": 0.9285714285714286,
+        "multiclass_accuracy": 0.5238095238095238,
+        "multiclass_f1": 0.4420847143235009
+    },
+    "knowledge_base": {
+        "Tomato_Healthy": {
+            "status": "Healthy",
+            "severity": "None",
+            "scientific_name": "Solanum lycopersicum",
+            "description": "Leaf exhibits uniform chlorophyll distribution, turgid cell structure, and no visible fungal spots or viral curling.",
+            "cause": "Optimal growth conditions with balanced nutrients and irrigation.",
+            "treatments": [
+                "Maintain consistent drip irrigation at the root zone (avoid wetting leaves).",
+                "Ensure proper crop spacing for air circulation and sunlight penetration.",
+                "Continue periodic scouting for early pest or disease symptoms."
+            ],
+            "organic_care": "Apply compost tea or seaweed extract to strengthen natural plant immunity."
+        },
+        "Tomato_Early_Blight": {
+            "status": "Diseased",
+            "severity": "Moderate to High",
+            "scientific_name": "Alternaria solani",
+            "description": "Dark brown to black concentric circular lesions ('target-board' pattern) with chlorotic yellow halos, starting on older foliage.",
+            "cause": "Fungal pathogen favored by warm temperatures (24-29\u00b0C) and prolonged leaf wetness.",
+            "treatments": [
+                "Apply protective copper-based fungicide (Copper Hydroxide) or Chlorothalonil upon first symptom onset.",
+                "Prune infected lower foliage immediately and burn/dispose away from the field.",
+                "Avoid overhead sprinkler irrigation; switch to drip irrigation."
+            ],
+            "organic_care": "Spray Bacillus subtilis (Serenade) or copper octanoate organic bio-fungicide."
+        },
+        "Tomato_Late_Blight": {
+            "status": "Diseased",
+            "severity": "Critical",
+            "scientific_name": "Phytophthora infestans",
+            "description": "Large, irregular water-soaked pale-green to dark brown lesions. Rapidly blights foliage and stems during humid conditions.",
+            "cause": "Water mold (Oomycete) favored by cool, wet weather (<20\u00b0C and >90% humidity). Notorious as the cause of the Irish Potato Famine.",
+            "treatments": [
+                "Emergency application of systemic fungicides such as Mefenoxam or Mancozeb + Dimethomorph.",
+                "Strictly isolate infected plants; remove and bag severely damaged vines immediately.",
+                "Sterilize all pruning tools with 70% isopropyl alcohol between plants."
+            ],
+            "organic_care": "Preventive copper sulfate applications; ensure wide row spacing to maximize airflow."
+        },
+        "Tomato_Bacterial_Spot": {
+            "status": "Diseased",
+            "severity": "High",
+            "scientific_name": "Xanthomonas perforans / euvesicatoria",
+            "description": "Small, dark water-soaked spots (1-3mm) that turn angular and purplish-brown, often surrounded by yellow halos. Leaves may turn yellow and drop.",
+            "cause": "Bacterial infection transmitted by seed, infected crop debris, and splashing rain.",
+            "treatments": [
+                "Spray Copper bactericide combined with Mancozeb (improves copper efficacy).",
+                "Avoid handling or cultivating plants when foliage is wet to prevent spreading bacteria.",
+                "Practice minimum 2-year crop rotation with non-solanaceous crops."
+            ],
+            "organic_care": "Apply Actinovate (Streptomyces lydicus) or Agri-Phage bacteriophage spray."
+        },
+        "Tomato_Septoria_Leaf_Spot": {
+            "status": "Diseased",
+            "severity": "Moderate",
+            "scientific_name": "Septoria lycopersici",
+            "description": "Numerous small, circular lesions with dark brown margins and light tan or gray centers with tiny black fungal pycnidia dots inside.",
+            "cause": "Fungal spores overwintering in solanaceous weeds and crop debris, spread by wind-driven rain.",
+            "treatments": [
+                "Apply Chlorothalonil, Pyraclostrobin, or Azoxystrobin fungicides at 7-10 day intervals.",
+                "Mulch heavily around the base of plants to prevent soil-splash onto lower leaves.",
+                "Prune bottom 12-18 inches of leaves to stop splash infection."
+            ],
+            "organic_care": "Neem oil or potassium bicarbonate sprays to suppress fungal sporulation."
+        },
+        "Tomato_Yellow_Leaf_Curl": {
+            "status": "Diseased",
+            "severity": "Severe",
+            "scientific_name": "Tomato Yellow Leaf Curl Virus (TYLCV)",
+            "description": "Upward curling and cupping of leaf margins, severe interveinal chlorosis (yellowing), stunting, and aborted fruit set.",
+            "cause": "Begomovirus transmitted primarily by Silverleaf Whiteflies (Bemisia tabaci).",
+            "treatments": [
+                "Control whitefly vectors using systemic insecticides (Imidacloprid, Acetamiprid).",
+                "Install insect-proof fine mesh netting (50-mesh) in greenhouses and nurseries.",
+                "Rogue out and destroy infected viral plants immediately (viruses cannot be cured once inside the vascular system)."
+            ],
+            "organic_care": "Use yellow sticky traps to monitor whiteflies; spray insecticidal soap or horticultural neem oil weekly."
+        }
+    }
+}

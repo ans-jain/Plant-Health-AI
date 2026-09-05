@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary upload files
+temp_uploads/
+uploads/
+
+# Virtual Environments
+env/
+venv/
+ENV/
+.venv/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Dataset folder (can be populated via python download_dataset.py)
+dataset/
+
+# IDE files
+.vscode/
+.idea/

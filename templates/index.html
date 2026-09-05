@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantHealth-AI — Plant Health & Disease Diagnostic System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-area">
+                <span class="logo-icon">🌿</span>
+                <div>
+                    <h1>PlantHealth-AI</h1>
+                    <p class="tagline">Intelligent Plant Disease Detection & Diagnostic System</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="main-grid">
+            <!-- Left Panel: Upload and Control -->
+            <section class="card upload-panel">
+                <h2>Upload Leaf Sample</h2>
+                <p class="instructions">Select or drop a plant leaf image (JPG, PNG) to analyze its health status.</p>
+
+                <div class="dropzone" id="dropZone">
+                    <input type="file" id="fileInput" accept="image/*" class="file-input">
+                    <div class="dropzone-content" id="dropzonePrompt">
+                        <div class="upload-icon">📷</div>
+                        <p class="drop-text">Drag & drop leaf photo here, or <span>browse</span></p>
+                        <p class="sub-text">Supported formats: JPG, JPEG, PNG</p>
+                    </div>
+                    <div class="preview-container" id="previewContainer" style="display: none;">
+                        <img id="imagePreview" alt="Leaf Preview" class="image-preview">
+                        <button type="button" class="btn-remove" id="btnRemove">✕ Change Image</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="btnDiagnose" class="btn-primary" disabled>
+                        <span class="btn-text">Diagnose Leaf Health</span>
+                        <div class="spinner-small" style="display: none;"></div>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Right Panel: Diagnostic Results -->
+            <section class="card results-panel" id="resultsPanel">
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-icon">🍃</div>
+                    <h3>No Leaf Analyzed Yet</h3>
+                    <p>Upload a leaf image on the left to check for diseases, view affected areas, and get clear treatment steps.</p>
+                </div>
+
+                <div class="diagnosis-results" id="diagnosisContent" style="display: none;">
+                    <!-- Status Banner -->
+                    <div class="status-banner" id="statusBanner">
+                        <div class="status-indicator">
+                            <span class="status-icon" id="statusIcon">✓</span>
+                            <div>
+                                <h3 id="healthStatus">Healthy</h3>
+                                <p id="specificDiagnosis" class="specific-disease">Tomato — Healthy Leaf</p>
+                            </div>
+                        </div>
+                        <div class="confidence-badge">
+                            <span class="conf-label">Confidence</span>
+                            <span class="conf-value" id="confidenceScore">99.4%</span>
+                        </div>
+                    </div>
+
+                    <!-- Visual Affected Area Inspection -->
+                    <div class="inspection-section">
+                        <h4>Visual Disease Inspection</h4>
+                        
+                        <div class="visual-comparison">
+                            <div class="visual-box">
+                                <span class="box-tag">Original Leaf</span>
+                                <img id="originalView" alt="Original" class="visual-img">
+                            </div>
+                            <div class="visual-box">
+                                <span class="box-tag">Detected Affected Areas</span>
+                                <img id="gradcamView" alt="Affected Areas" class="visual-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Treatment & Care Section -->
+                    <div class="prescription-section">
+                        <h4>Disease Information & Recommended Care</h4>
+                        
+                        <div class="info-card">
+                            <span class="info-title">Cause & Symptoms</span>
+                            <p id="pathologyCause">Optimal growing conditions with healthy leaf tissue.</p>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="info-title">Recommended Treatment</span>
+                            <ul id="treatmentList" class="treatment-list">
+                                <li>Maintain regular drip watering at the root zone.</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card organic-card">
+                            <span class="info-title">🌱 Organic & Preventative Care</span>
+                            <p id="organicCare">Apply organic compost and inspect plants regularly.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>PlantHealth-AI • Intelligent Plant Health & Pathology Diagnostic System</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
