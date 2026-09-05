@@ -172,7 +172,7 @@ Receives a leaf image file (`multipart/form-data`) and returns a complete diagno
 ---
 
 ## 📄 License
-This project is open-source under the [MIT License](LICENSE).
+This project is open-source under the [MIT License].
 
 ## Author
 
